@@ -1,0 +1,18 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>BLEFM</ion-title>
+    <ion-buttons end>
+      <button (click)="scanBle()" ion-button end>Scan</button>
+    </ion-buttons>  
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list>
+    <button ion-item *ngFor="let ble of bles" (click)="connectBle(ble)">{{ ble.name }} <ion-icon name="bluetooth" item-right></ion-icon></button> 
+  </ion-list>
+
+</ion-content>
